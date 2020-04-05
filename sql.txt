@@ -10,3 +10,5 @@ CREATE TABLE jpa_test (
 INSERT INTO `jpa_test`(`no`, `name`, `age`, `address`, `likefood`) VALUES (1, 'jbj', 34, 'tokyo', 'pizza');
 INSERT INTO `jpa_test`(`no`, `name`, `age`, `address`, `likefood`) VALUES (2, 'kbk', 30, 'osaka', 'ramen');
 INSERT INTO `jpa_test`(`no`, `name`, `age`, `address`, `likefood`) VALUES (3, 'pkh', 28, 'nagoya', 'susi');
+
+修正
