@@ -1,0 +1,12 @@
+CREATE TABLE jpa_test (
+    no int(10) not null PRIMARY KEY,
+    name varchar(20) not null,
+    age int(3) null,
+    address varchar(20) null,
+    likefood varchar(20) null
+    )
+
+
+INSERT INTO `jpa_test`(`no`, `name`, `age`, `address`, `likefood`) VALUES (1, 'jbj', 34, 'tokyo', 'pizza');
+INSERT INTO `jpa_test`(`no`, `name`, `age`, `address`, `likefood`) VALUES (2, 'kbk', 30, 'osaka', 'ramen');
+INSERT INTO `jpa_test`(`no`, `name`, `age`, `address`, `likefood`) VALUES (3, 'pkh', 28, 'nagoya', 'susi');
