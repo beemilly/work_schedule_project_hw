@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class jpa_test {
+public class Jpa_Test {
 
 	@Id
 	private int no;
@@ -74,7 +74,7 @@ public class jpa_test {
 	}
 	@Override
 	public String toString() {
-		return "jpa_test [no=" + no + ", name=" + name + ", age=" + age + ", address=" + address + ", likefood="
+		return "Jpa_Test [no=" + no + ", name=" + name + ", age=" + age + ", address=" + address + ", likefood="
 				+ likefood + "]";
 	}
 	
