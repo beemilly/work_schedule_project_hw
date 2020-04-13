@@ -8,7 +8,8 @@ public interface LoginDao   {
 
 	
 	
-	public int logincheck(String id, String password);
+	//public int logincheck(String id, String password);
+	public int findUser(String id, String password);
 	
 	
 	
