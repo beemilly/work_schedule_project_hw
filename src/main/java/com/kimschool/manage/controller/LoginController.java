@@ -51,10 +51,12 @@ public class LoginController {
 		
 		ModelAndView mv = new ModelAndView("result");
 		
+		// 호출만 한 것
 		int count = loginservice.checklogin(id, password);
 		
 		mv.addObject("count", count);
 		
 		return mv;
 	}
+	
 }

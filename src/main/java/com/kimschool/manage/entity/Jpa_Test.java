@@ -1,25 +1,39 @@
 package com.kimschool.manage.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "jpa_test")
-@NamedQuery(
-		name = "Jpa_Test.findBypassword",
-		query = "select j from Jpa_Test j where j.password = :password and j.id = :id"
-		)
+@NamedQueries({
+	@NamedQuery(
+			name = "Jpa_Test.findBypassword",
+			query = "select j from Jpa_Test j where j.password = :password and j.id = :id"
+			),
+	@NamedQuery(
+			name = "Jpa_Test.findpassword",
+			query = "select j.password from Jpa_Test j where j.id = :id and j.email = :email"
+			)
+})
 
 public class Jpa_Test {
 
-	private String id;
 	@Id
 	private int no;
+	private String id;
 	private String password;
+	// insert시 값이 들어가는걸 방지한다(null)
+	@Column(insertable = false)
 	private String auth1;
+	// insert시 값이 들어가는걸 방지한다(null)
+	@Column(insertable = false)
 	private String status;
+	// insert시 값이 들어가는걸 방지한다(null)
+	@Column(insertable = false)
 	private String reg_date;
 	private String email;
 	/**

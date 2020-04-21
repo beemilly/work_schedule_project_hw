@@ -16,9 +16,11 @@ ID : <br>
 PASSWORD : <br>
 <input type = "password" name = "password"><br>
 <input type = "submit" value = "로그인"><br>
-<a href = "#">회원가입</a>
 
 </form>
+
+<a href = "movereguser">회원가입</a><br>
+<a href = "movefindpassword">패스워드 찾기</a><br>
 
 
 </body>
