@@ -23,5 +23,11 @@ PASSWORD : <br>
 <a href = "movefindpassword">패스워드 찾기</a><br>
 
 
+<hr>
+<form action="wbstest">
+<input type = "text" name = "u_no" placeholder="사원번호를 입력해주세요"><br>
+<input type = "submit" value = "근무시간 확인">
+</form>
+
 </body>
 </html>
