@@ -39,7 +39,7 @@
 </tr>
 <c:forEach items="${list}" var = "v">
 <tr>
-<td>${v.date}</td><td>${v.start_time}</td><td>${v.end_time}</td><td>${v.rest_time}</td><td>${v.end_time-v.start_time-v.rest_time}H</td><td>${v.vocation_type}</td><td>${v.memo}</td>
+<td>${v.date}</td><td>${v.start_time}</td><td>${v.end_time}</td><td>${v.rest_time}</td><td>${v.end_time-v.start_time-v.rest_time}</td><td>${v.vocation_type}</td><td>${v.memo}</td>
 </tr>
 </c:forEach>
 </table>

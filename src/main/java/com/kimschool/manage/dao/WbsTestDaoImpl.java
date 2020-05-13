@@ -42,15 +42,15 @@ public class WbsTestDaoImpl implements WbsTestDao {
 
 		List<User_Info> list = null;
 		
-//		try {
+		try {
 			EntityManager em = conn.getConnection();
 			list = em.createNamedQuery("User_Info.selectall", User_Info.class).
 					setParameter("u_no", u_no).
 					getResultList();
 			return list;
-//		} catch (Exception e) {
-//			return null;
-//		}
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 
@@ -59,15 +59,15 @@ public class WbsTestDaoImpl implements WbsTestDao {
 
 		List<Workplaceinfo> list = null;
 		
-//		try {
+		try {
 			EntityManager em = conn.getConnection();
 			list = em.createNamedQuery("Workplaceinfo.selectall", Workplaceinfo.class).
 					setParameter("u_no", u_no).
 					getResultList();
 			return list;
-//		} catch (Exception e) {
-//			return null;
-//		}
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 }
