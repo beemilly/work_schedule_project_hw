@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "wbs_2020")
 @NamedQuery(
-		name = "Wbs_2020.selectall",
+		name = "Wbs_2020.findByu_no",
 		query = "select w from Wbs_2020 w where w.u_no = :u_no"
 		)
 
@@ -24,7 +24,7 @@ public class Wbs_2020 {
 	private String start_time;
 	private String end_time;
 	private String rest_time;
-	private String vocation_type;
+	private String vacation_type;
 	private String memo;
 	private String reg_date;
 	private String upd_date;
@@ -103,14 +103,14 @@ public class Wbs_2020 {
 	/**
 	 * @return the vocation_type
 	 */
-	public String getVocation_type() {
-		return vocation_type;
+	public String getVacation_type() {
+		return vacation_type;
 	}
 	/**
 	 * @param vocation_type the vocation_type to set
 	 */
-	public void setVocation_type(String vocation_type) {
-		this.vocation_type = vocation_type;
+	public void setVacation_type(String vacation_type) {
+		this.vacation_type = vacation_type;
 	}
 	/**
 	 * @return the memo
@@ -151,7 +151,7 @@ public class Wbs_2020 {
 	@Override
 	public String toString() {
 		return "Wbs_2020 [no=" + no + ", u_no=" + u_no + ", date=" + date + ", start_time=" + start_time + ", end_time="
-				+ end_time + ", rest_time=" + rest_time + ", vocation_type=" + vocation_type + ", memo=" + memo
+				+ end_time + ", rest_time=" + rest_time + ", vocation_type=" + vacation_type + ", memo=" + memo
 				+ ", reg_date=" + reg_date + ", upd_date=" + upd_date + "]";
 	}
 	

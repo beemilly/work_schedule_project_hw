@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.kimschool.manage.entity.User_Info;
 import com.kimschool.manage.entity.Wbs_2020;
-import com.kimschool.manage.entity.Workplaceinfo;
+import com.kimschool.manage.entity.WorkPlaceInfo;
 import com.kimschool.manage.service.WbsTestService;
 
 @Controller
@@ -28,7 +28,7 @@ public class WbsTestController {
 		
 		List<User_Info> list2 = service.select_user_info(u_no);
 		
-		List<Workplaceinfo> list3 = service.select_workplaceinfo(u_no);
+		List<WorkPlaceInfo> list3 = service.select_workplaceinfo(u_no);
 		
 		mv.addObject("list", list);
 		mv.addObject("list2", list2);
