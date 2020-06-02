@@ -70,7 +70,9 @@ public class WbsServiceImpl implements WbsService {
 			wbsvo.setStart_m(wbs.getStart_time().substring(2,4));
 			wbsvo.setEnd_h(wbs.getEnd_time().substring(0,2));
 			wbsvo.setEnd_m(wbs.getEnd_time().substring(2,4));
-			wbsvo.setTotal_h(String.valueOf(dateUtil.timeConv(wbs.getStart_time(), wbs.getEnd_time())));
+			wbsvo.setRest_h(wbs.getRest_time().substring(0,2));
+			wbsvo.setRest_m(wbs.getRest_time().substring(2,4));
+			wbsvo.setTotal_h(dateUtil.timeConv(wbs.getStart_time(), wbs.getEnd_time(), wbs.getRest_time()));
 			wbsvo.setVacation_type(dateUtil.vacationCatConv(wbs.getVacation_type()));
 			wbsvo.setMemo(wbs.getMemo());
 			

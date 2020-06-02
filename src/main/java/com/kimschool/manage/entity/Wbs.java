@@ -7,6 +7,8 @@ public class Wbs {
 	private String start_m;
 	private String end_h;
 	private String end_m;
+	private String rest_h;
+	private String rest_m;
 	private String total_h;
 	private String vacation_type;
 	private String memo;
@@ -71,6 +73,30 @@ public class Wbs {
 		this.end_m = end_m;
 	}
 	/**
+	 * @return the rest_h
+	 */
+	public String getRest_h() {
+		return rest_h;
+	}
+	/**
+	 * @param rest_h the rest_h to set
+	 */
+	public void setRest_h(String rest_h) {
+		this.rest_h = rest_h;
+	}
+	/**
+	 * @return the rest_m
+	 */
+	public String getRest_m() {
+		return rest_m;
+	}
+	/**
+	 * @param rest_m the rest_m to set
+	 */
+	public void setRest_m(String rest_m) {
+		this.rest_m = rest_m;
+	}
+	/**
 	 * @return the total_h
 	 */
 	public String getTotal_h() {
@@ -106,7 +132,6 @@ public class Wbs {
 	public void setMemo(String memo) {
 		this.memo = memo;
 	}
-	
 	
 	
 	

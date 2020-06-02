@@ -50,13 +50,14 @@
 
 <table border=1>
 	<tr style="background-color: lightblue">
-		<th>日付<th>開始時間</th><th>終了時間</th><th>合計時間</th><th>休日区分</th><th>メモ</th>
+		<th>日付<th>開始時間</th><th>終了時間</th><th>昼休み時間</th><th>合計時間</th><th>休日区分</th><th>メモ</th>
 	</tr>
 	<c:forEach items="${wbsinfo.wbslist}" var="wbs">
 		<tr>
 			<td>${wbs.date}</td>
 			<td>${wbs.start_h}時 ${wbs.start_m}分</td>
 			<td>${wbs.end_h}時 ${wbs.end_m}分</td>
+			<td>${wbs.rest_h}時 ${wbs.rest_m}分</td>
 			<td>${wbs.total_h}</td>
 			<td>${wbs.vacation_type}</td>
 			<td>${wbs.memo}</td>
