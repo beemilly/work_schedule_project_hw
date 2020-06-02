@@ -27,7 +27,7 @@ public class DateUtil {
 		
 	}
 	
-	public String timeConv(String startTime, String endTime, String restTime) {
+	public double timeConv(String startTime, String endTime, String restTime) {
 		
 		float start_h = Float.parseFloat(startTime.substring(0,2));
 		float start_m = Float.parseFloat(startTime.substring(2,4));
@@ -38,7 +38,8 @@ public class DateUtil {
 		
 		float totaltime = end_h + (end_m / 60) - (start_h + (start_m / 60)) - (rest_h + (rest_m / 60));
 		
-		String result = String.format("%.2f", totaltime);
+//		String result = String.format("%.2f", totaltime);
+		double result = Math.floor(totaltime*100)/100;
 		
 		return result;
 		
