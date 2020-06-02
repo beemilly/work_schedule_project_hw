@@ -13,6 +13,7 @@ import com.kimschool.manage.entity.Wbs;
 import com.kimschool.manage.entity.WbsInfoVo;
 import com.kimschool.manage.entity.Wbs_2020;
 import com.kimschool.manage.entity.WorkPlaceInfo;
+import com.kimschool.manage.service.util.DateUtil;
 
 @Service
 public class WbsServiceImpl implements WbsService {
@@ -43,6 +44,7 @@ public class WbsServiceImpl implements WbsService {
 	public ModelAndView getwbsinfo(String u_no) {
 		
 		ModelAndView mv = new ModelAndView("wbs");
+		DateUtil dateUtil = new DateUtil();
 		
 		List<Wbs_2020> wbs_2020 = new ArrayList<Wbs_2020>();
 		List<User_Info> user_info = new ArrayList<User_Info>();
@@ -64,22 +66,12 @@ public class WbsServiceImpl implements WbsService {
 		for (Wbs_2020 wbs : wbs_2020) {
 			Wbs wbsvo = new Wbs();
 			wbsvo.setDate(wbs.getDate());
-			if (wbs.getStart_time().equals("0")) {
-				wbsvo.setStart_h("0");
-				wbsvo.setStart_m("0");
-			} else {
-				wbsvo.setStart_h(wbs.getStart_time().substring(0, 2));
-				wbsvo.setStart_m(wbs.getStart_time().substring(2, 4));
-			}
-			if (wbs.getEnd_time().equals("0")) {
-				wbsvo.setEnd_h("0");
-				wbsvo.setEnd_m("0");
-			} else {
-				wbsvo.setEnd_h(wbs.getEnd_time().substring(0, 2));
-				wbsvo.setEnd_m(wbs.getEnd_time().substring(2, 4));
-			}
-			wbsvo.setTotal_h("8");
-			wbsvo.setVacation_type(wbs.getVacation_type());
+			wbsvo.setStart_h(wbs.getStart_time().substring(0,2));
+			wbsvo.setStart_m(wbs.getStart_time().substring(2,4));
+			wbsvo.setEnd_h(wbs.getEnd_time().substring(0,2));
+			wbsvo.setEnd_m(wbs.getEnd_time().substring(2,4));
+			wbsvo.setTotal_h(String.valueOf(dateUtil.timeConv(wbs.getStart_time(), wbs.getEnd_time())));
+			wbsvo.setVacation_type(dateUtil.vacationCatConv(wbs.getVacation_type()));
 			wbsvo.setMemo(wbs.getMemo());
 			
 			wbslist.add(wbsvo);

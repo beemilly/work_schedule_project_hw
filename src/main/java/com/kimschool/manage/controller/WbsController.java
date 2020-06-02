@@ -12,16 +12,16 @@ public class WbsController {
 
 	@Autowired
 	WbsService wbsservice;
-	
-	
-	
-//	@RequestMapping("/wbs")
-//	public ModelAndView init() {
-//		
-//		ModelAndView mv = new ModelAndView("wbs");
-//		
-//		return mv;
-//	}
+
+	@RequestMapping(value = "/")
+	public ModelAndView login() {
+		
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("login");
+		
+		return mv;
+	}
 	
 	@RequestMapping("wbslogincheck")
 	public ModelAndView wbslogincheck(String u_no, String u_password) {
